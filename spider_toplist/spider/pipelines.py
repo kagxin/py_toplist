@@ -27,8 +27,8 @@ class MongoDBPipeline(object):
             return item
         collection = m.entry
         data = dict(item)
-        collection.update_one({'rank': data['rank'], 'url': data['url']},
+        collection.update_one({'rank': data['rank'], 'target': data['target']},
                               {'$set': {'target': data['target'], 'title': data['title'],
-                                        'release_date': data['release_date']}},
+                                        'release_date': data['release_date'], 'url': data['url']}},
                               upsert=True)
         return item

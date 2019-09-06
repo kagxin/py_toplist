@@ -30,10 +30,8 @@ def entry():
 
 @app.route('/api/site')
 def site():
-    data = m.site.aggregate([{'$match': {}},
-                             {"$project": {"_id": {"$toString": "$_id"}, 'name': 1}}
-                             ])
-    return jsonify(list(data))
+    sites = ("糗事百科", "知乎", "v2ex", "虎扑", "微博", "微信", "GitHub", "segmentfault")
+    return jsonify([{"_id": i, "name": name} for i, name in enumerate(sites)])
 
 
 if __name__ == '__main__':
