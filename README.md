@@ -3,7 +3,7 @@
 ## 今日热榜
 > 今日热榜是一个获取各大热门网站热门头条的聚合网站，使用python语言编写，爬虫使用scripy。
 
-![例子](./picture/home.png)
+![例子](https://user-images.githubusercontent.com/16145883/64414607-37d02280-d0c6-11e9-86cf-accb299077a2.png)
 
 ## TODO
 知乎hot, douban.....
